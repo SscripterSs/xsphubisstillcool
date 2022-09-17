@@ -1,0 +1,35 @@
+--xsphub - speed run 4
+
+--ui and shit
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("XSPhub - free trial", "BloodTheme")
+
+if game.PlaceId == 183364845 then
+
+--tabs
+local MainTab = Window:NewTab("Main")
+local ftTab = Window:NewTab("xsphub Features")
+local CrdTab = Window:NewTab("Credits")
+
+--sections
+local MainSection = MainTab:NewSection("Main")
+local ftSection = ftTab:NewSection("Xsphub Features that free trial doesnt got:")
+local CrdSection = CrdTab:NewSection("Credits")
+
+--buttons, and others
+MainSection:NewSlider("Walkspeed", "This makes you walk faster", 450, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+MainSection:NewSlider("JumpPower", "This makes you Jump High", 450, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+CrdSection:NewLabel("free trial Dev: jbSploit#7903")
+
+CrdSection:NewLabel("Owner: jbSploit#7903")
+
+CrdSection:NewLabel("Tester: xsp#9138")
+
+ftSection:NewLabel("It gots find best setting for game, kick all players")
+end
